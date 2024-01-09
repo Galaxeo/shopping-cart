@@ -4,3 +4,16 @@
   padding: 2rem;
   text-align: center;
 }
+.itemImg {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.item-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  margin: 0 auto;
+}
