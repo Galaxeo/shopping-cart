@@ -17,3 +17,10 @@
   grid-gap: 1rem;
   margin: 0 auto;
 }
+.itemPageImg {
+  width: 50vh;
+  height: 50vh;
+  object-fit: contain;
+  margin: 0 auto;
+  overflow: hidden;
+}
