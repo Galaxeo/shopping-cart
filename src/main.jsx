@@ -6,6 +6,7 @@ import ItemPage from "./ItemPage.jsx";
 import "./index.css";
 
 const router = createBrowserRouter([
+  // consider using context
   {
     path: "/",
     element: <App />,
