@@ -1,10 +1,10 @@
 import { useState, useEffect, useContext } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { CartContext } from "./App";
 function ItemPage() {
   const [item, setItem] = useState({});
   const { id } = useParams();
-  const { cart, addToCart } = useContext(CartContext);
+  const { addToCart } = useContext(CartContext);
   useEffect(() => {
     fetch(`https://fakestoreapi.com/products/${id}`)
       .then((res) => res.json())
@@ -12,7 +12,7 @@ function ItemPage() {
   }, [id]);
   const handleAddToCart = () => {
     addToCart(item);
-    console.log("Added to cart!");
+    alert("Added to cart!");
   };
   return (
     <>
@@ -21,6 +21,9 @@ function ItemPage() {
       <img className="itemPageImg" src={item.image} alt={item.title} />
       <p>{item.description}</p>
       <button onClick={handleAddToCart}>Add To Cart</button>
+      <Link to="/" style={{ position: "absolute", top: 0, right: 0 }}>
+        <button>Home</button>
+      </Link>
     </>
   );
 }

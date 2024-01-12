@@ -1,12 +1,14 @@
+// TODO: Add cart page
 import "./Home";
 import "./App.css";
 import Home from "./Home";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ItemPage from "./ItemPage";
 import { createContext, useState } from "react";
+import Cart from "./Cart";
+import { Link } from "react-router-dom";
 
 const router = createBrowserRouter([
-  // consider using context
   {
     path: "/",
     element: <Home />,
@@ -15,6 +17,7 @@ const router = createBrowserRouter([
     path: "/shop/:id",
     element: <ItemPage />,
   },
+  { path: "/cart", element: <Cart /> },
 ]);
 
 export const CartContext = createContext([]);
@@ -36,7 +39,7 @@ function App() {
   return (
     <>
       <CartProvider>
-        <RouterProvider router={router} />
+        <RouterProvider router={router}></RouterProvider>
       </CartProvider>
     </>
   );

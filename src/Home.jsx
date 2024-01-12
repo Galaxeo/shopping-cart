@@ -28,6 +28,9 @@ function Home() {
           </Link>
         ))}
       </div>
+      <Link to="/cart" style={{ position: "absolute", top: 0, right: 0 }}>
+        <button>Cart</button>
+      </Link>
     </>
   );
 }
