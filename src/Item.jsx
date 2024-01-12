@@ -1,7 +1,6 @@
-import { useState } from "react";
 import "./App.css";
 
-function Item({ image, name, price }) {
+function Item({ image, name }) {
   return (
     <div className="item">
       <img className="itemImg" src={image} alt={name} />

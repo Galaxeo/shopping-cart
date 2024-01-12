@@ -14,7 +14,11 @@ function Home() {
       {/* Grid of 9 different Items*/}
       <div className="item-grid">
         {products.map((product) => (
-          <Link style={{ color: "whitesmoke" }} to={`/shop/${product.id}`}>
+          <Link
+            key={product.id}
+            style={{ color: "whitesmoke" }}
+            to={`/shop/${product.id}`}
+          >
             <Item
               key={product.id}
               image={product.image}
